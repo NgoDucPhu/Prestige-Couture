@@ -1,0 +1,33 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    color: $text-color;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+p {
+    line-height: 1.2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: $text-color;
+    text-decoration: none;
+}
