@@ -1,0 +1,33 @@
+@media only screen and (min-width: 768px) {
+  .pc-wrapper {
+    .pc-header {
+      padding: 2.5rem 3rem;
+
+      .pc-header__logo {
+        .pc-logo__link {
+            font-size: 3rem;
+        }
+      }
+
+      .pc-main__nav {
+          .pc-nav__menu {
+              width: 400px;
+          }
+      }
+
+      .pc-menu__icon {
+        width: 25px;
+        height: 25px;
+
+        &--search {
+            margin-right: 2rem;
+        }
+
+        &--times {
+            width: 20px;
+            height: 20px;
+        }
+      }
+    }
+  }
+}
