@@ -12,25 +12,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
     <div id="root">
         <div class="pc-wrapper">
-
             <!-- ---------- Notify --------- -->
-            <p class="pc-notify">
-                Free shipping on orders over $100
-            </p>
+            <p class="pc-notify">Free shipping on orders over $100</p>
             <!-- ---------- End Notify --------- -->
 
             <!-- ----------- Header ------------- -->
             <div class="pc-header">
-
                 <!-- ------ Currency ------ -->
                 <div class="pc-header__currency">
                     <div class="pc-currency">
-                        <button class="pc-currency__btn btn">USD$
+                        <button class="pc-currency__btn btn">
+                            USD$
                             <i class="fas fa-angle-down"></i>
                         </button>
                         <ul class="pc-currency__list">
@@ -45,20 +43,18 @@
 
                 <!-- ------ Main Nav ------ -->
                 <div class="pc-main__nav">
-
                     <!-- --- Main Nav Header --- -->
                     <label for="pc-menu__input" class="pc-menu__icon--bars">
                         <svg class="pc-menu__icon" role="presentation" viewBox="0 0 20 14">
                             <path d="M0 14v-1h20v1H0zm0-7.5h20v1H0v-1zM0 0h20v1H0V0z" fill="currentColor"></path>
                         </svg>
                     </label>
-                    <input type="checkbox" class="pc-menu__input" id="pc-menu__input">
+                    <input type="checkbox" class="pc-menu__input" id="pc-menu__input" />
                     <label for="pc-menu__input" class="pc-menu__overlay"></label>
                     <!-- --- End Main Nav Header --- -->
 
                     <!-- --- Nav Menu --- -->
                     <div class="pc-nav__menu">
-
                         <!-- --- Nav Menu Header --- -->
                         <div class="pc-menu__header">
                             <label for="pc-menu__input" class="pc-menu__icon--bars">
@@ -127,7 +123,6 @@
                                     </li>
                                 </ul>
                                 <!-- --- End Nav SubList --- -->
-
                             </li>
                             <li class="pc-menu__item">
                                 <span class="pc-menu__text">Blog</span>
@@ -193,10 +188,8 @@
                             </li>
                         </ul>
                         <!-- --- End Nav Menu Footer --- -->
-
                     </div>
                     <!-- --- End Nav Menu --- -->
-
                 </div>
                 <!-- --- End Main Nav --- -->
 
@@ -241,22 +234,77 @@
                     <li class="pc-nav__item">FAQ</li>
                 </ul>
                 <!-- --- End Nav Second --- -->
-
             </div>
             <!-- --- End Header -->
 
             <!-- --- Slider --- -->
             <div class="pc-slider">
-
-
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide-1">
+                            <div class="slide__content">
+                                <div class="slide__subtitle">
+                                    New Collection
+                                </div>
+                                <div class="slide__title">
+                                    Superbloom Valley
+                                </div>
+                                <div class="slide__btn">
+                                    <a href="" class="btn btn__slide btn__slide--1">DRESSES</a>
+                                    <a href="" class="btn btn__slide btn__slide--1">TOPS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide-2">
+                            <div class="slide__content">
+                                <div class="slide__subtitle">
+                                    The
+                                </div>
+                                <div class="slide__title">
+                                    Superbloom
+                                </div>
+                                <div class="slide__btn">
+                                    <a href="" class="btn btn__slide btn__slide--2">SHOP THE COLLECTION</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide-3">
+                            <div class="slide__content">
+                                <div class="slide__subtitle">
+                                    Francesca
+                                </div>
+                                <div class="slide__title">
+                                    New Arrivals
+                                </div>
+                                <div class="slide__btn">
+                                    <a href="" class="btn btn__slide btn__slide--3">EXPLORE</a>
+                                    <a href="" class="btn btn__slide btn__slide--3">ALL DRESSES</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide-4">
+                            <div class="slide__content">
+                                <div class="slide__subtitle">
+                                    Blog
+                                </div>
+                                <div class="slide__title">
+                                    Our Campaigns
+                                </div>
+                                <div class="slide__btn">
+                                    <a href="" class="btn btn__slide btn__slide--4">DISCOVER</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
             <!-- --- End Slider --- -->
 
             <!-- --- Weekly Selection --- -->
-            <div class="pc-weekly">
-                <h3 class="pc-weekly__title">
-                    Weekly Selection
-                </h3>
+            <!-- <div class="pc-weekly">
+                <h3 class="pc-weekly__title">Weekly Selection</h3>
 
                 <div class="pc-weekly__tablist">
                     <div class="pc-tablist__btn">
@@ -264,16 +312,15 @@
                         <button class="btn btn--tablist">Top</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- --- End Weekly Selection --- -->
-
         </div>
         <!-- -------- End Wrapper --------- -->
-
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>

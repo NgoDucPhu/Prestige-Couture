@@ -12,6 +12,10 @@
 
       .pc-header__logo {
         flex-basis: 30%;
+        
+        .pc-logo__link {
+          font-size: 3.2rem;
+        }
       }
 
       .pc-header__currency {
@@ -67,6 +71,7 @@
             transition: opacity 0.3s ease-in-out;
             opacity: 1;
             transform: translateX(0);
+            z-index: 100;
           }
         }
       }
@@ -103,7 +108,7 @@
         align-items: center;
 
         .pc-nav__item {
-          margin: 2rem;
+          margin: 3rem 2rem 2rem;
           position: relative;
           cursor: pointer;
 
@@ -113,7 +118,7 @@
             height: 2px;
             background: $primary-color;
             position: absolute;
-            top: 215%;
+            top: 210%;
             left: 0;
           }
 
@@ -123,7 +128,7 @@
             height: 2px;
             background: $primary-color;
             position: absolute;
-            top: 215%;
+            top: 210%;
             left: 0;
             transition: all 0.3s ease-in-out;
           }

@@ -1,4 +1,4 @@
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 638px) {
   .pc-wrapper {
     .pc-header {
       padding: 2.5rem 3rem;
@@ -28,6 +28,10 @@
             height: 20px;
         }
       }
+    }
+    
+    .pc-slider {
+      height: 37vw;
     }
   }
 }
