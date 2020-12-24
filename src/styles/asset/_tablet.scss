@@ -32,6 +32,45 @@
     
     .pc-slider {
       height: 37vw;
+
+      .swiper-slide {
+        .slide__content {
+
+          .slide__btn {
+            .btn__slide--1, .btn__slide--3, .btn__slide--4{
+              max-width: 150px;
+            }
+
+            .btn__slide--2 {
+              max-width: 240px;
+            }
+          }
+        }
+      }
+      .slide-1 {
+        background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---6_1600x.jpg?v=1527703158');
+        background-size: cover;
+        background-position:  center;
+      }
+  
+      .slide-2 {
+        background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---8_1400x.jpg?v=1527703171');
+        background-size: cover;
+        background-position:  center;
+      }
+  
+      .slide-3 {
+        background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---11_1400x.jpg?v=1527703679');
+        background-size: cover;
+        background-position:  center;
+      }
+  
+      .slide-4 {
+        background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---4_1400x.jpg?v=1527703679');
+        background-size: cover;
+        background-position: center;
+      }
+
     }
   }
 }

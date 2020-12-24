@@ -33,21 +33,6 @@ $('.pc-menu__input').change(function() {
   }
 });
 
-// Resize width change background slider
-$(function () {
-  let reszWindow = function () {
-    var reswidth = screen.width;
-    if (reswidth > 638){
-      $('.slide-1').css('background-image', "url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---6_1600x.jpg?v=1527703158')");
-      $('.slide-2').css('background-image', "url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---8_1400x.jpg?v=1527703171')");
-      $('.slide-3').css('background-image', "url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---11_1400x.jpg?v=1527703679')");
-      $('.slide-4').css('background-image', "url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---4_1400x.jpg?v=1527703679')");
-    }
-  };
-  reszWindow();
-  $(window).resize(reszWindow);
-});
-
 // Slider Swiper
 var swiper = new Swiper('.swiper-container', {
   spaceBetween: 50,

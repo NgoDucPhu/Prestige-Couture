@@ -236,6 +236,46 @@
       background: #fff;
       width: 100%;
       height: 100%;
+
+      .slide__content {
+        position: absolute;
+        bottom: 70px;
+        left: 0;
+        color: $white;
+        text-align: left;
+        padding: 0 24px;
+        width: 100%;
+
+        .slide__title {
+          font-size: 2.2rem;
+          margin: 30px 0;
+          font-weight: bold;
+        }
+
+        .slide__subtitle {
+          font-size: 1.3rem;
+        }
+
+        .slide__btn {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          .btn__slide--1, .btn__slide--3 {
+            &:first-child {
+              margin-right: 5px;
+            }
+
+            &:last-child {
+              margin-left: 5px;
+            }
+          }
+
+          .btn__slide--4 {
+            flex-basis: auto;
+          }
+        }
+      }
     }
 
     .slide-1 {
@@ -257,7 +297,7 @@
     }
 
     .slide-4 {
-      background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/products/AFL2-18069-BK-EdieCascadeWrapMiniDress-Black-Front5_600x.jpg?v=1569273996');
+      background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-mobile---4_x800.jpg?v=1527725848');
       background-size: cover;
       background-position: center;
     }
