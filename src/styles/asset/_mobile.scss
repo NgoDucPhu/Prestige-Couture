@@ -79,6 +79,10 @@
               flex-basis: 50%;
             }
 
+            .pc-menu__text--gray {
+              color: $gray;
+            }
+
             &:not(:last-child)::after {
               content: "";
               position: absolute;
@@ -193,6 +197,10 @@
       .pc-logo__link {
         display: inline-block;
         font-size: 2.2rem;
+        text-decoration: none;
+        &:hover {
+          color: $primary-color;
+        }
       }
     }
 
@@ -261,7 +269,8 @@
           align-items: center;
           justify-content: flex-start;
 
-          .btn__slide--1, .btn__slide--3 {
+          .btn__reuseable--slide-1,
+          .btn__reuseable--slide-3 {
             &:first-child {
               margin-right: 5px;
             }
@@ -271,7 +280,11 @@
             }
           }
 
-          .btn__slide--4 {
+          .btn__reuseable--slide-2 {
+            flex-basis: 100%;
+          }
+
+          .btn__reuseable--slide-4 {
             flex-basis: auto;
           }
         }
@@ -279,29 +292,29 @@
     }
 
     .slide-1 {
-      background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-mobile---1_x800.jpg?v=1527725812');
-      background-size: cover;
-      background-position:  center;
-    }
-
-    .slide-2 {
-      background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-mobile---2_x800.jpg?v=1527725826');
-      background-size: cover;
-      background-position:  center;
-    }
-
-    .slide-3 {
-      background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-mobile---3_x800.jpg?v=1527725838');
-      background-size: cover;
-      background-position:  center;
-    }
-
-    .slide-4 {
-      background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-mobile---4_x800.jpg?v=1527725848');
+      background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-mobile---1_x800.jpg?v=1527725812");
       background-size: cover;
       background-position: center;
     }
-    
+
+    .slide-2 {
+      background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-mobile---2_x800.jpg?v=1527725826");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide-3 {
+      background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-mobile---3_x800.jpg?v=1527725838");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide-4 {
+      background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-mobile---4_x800.jpg?v=1527725848");
+      background-size: cover;
+      background-position: center;
+    }
+
     .swiper-pagination {
       text-align: left;
       padding: 0 2.5rem 2.5rem;
@@ -321,8 +334,156 @@
       }
     }
   }
+
+  .pc-weekly {
+    padding: 80px 0;
+    text-align: center;
+
+    .pc-weekly__title {
+      margin-bottom: 16px;
+    }
+
+    .pc-weekly__tablist {
+      .pc-tablist__btn {
+        .btn--tablist {
+          font-size: 24px;
+          position: relative;
+          padding: 3px 0;
+
+          &:first-child {
+            margin-right: 30px;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #000;
+          }
+
+          &:last-child::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .pc-weekly__content {
+      margin: 70px 0 0;
+      width: 100%;
+      padding: 0 30px;
+
+      .swiper-container {
+        .swiper-button-prev,
+        .swiper-button-next {
+          height: 15px;
+
+          &::after {
+            font-size: 15px;
+            color: $black;
+            background: $white;
+            padding: 12px 17px;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+            outline: none;
+          }
+
+          &:hover::after {
+            transform: scale(1.08);
+            box-shadow: 0 2px 10px rgba(54, 54, 54, 0.15);
+          }
+        }
+
+        .swiper-button-prev {
+          left: 20px;
+        }
+
+        .swiper-button-next {
+          right: 20px;
+        }
+
+        .slide__box {
+          cursor: pointer;
+          position: relative;
+
+          .slide__img {
+            max-width: 100%;
+            max-height: 100%;
+            transition: opacity 0.3s ease-in-out;
+
+            &:nth-child(2) {
+              opacity: 0;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+
+            &:hover {
+              &:nth-child(1) {
+                opacity: 0;
+              }
+
+              &:nth-child(2) {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        .slide__title {
+          margin: 20px 0 15px;
+          font-size: 1.5rem;
+          text-align: left;
+        }
+
+        .slide__cost {
+          text-align: left;
+          color: $gray;
+          font-size: 1.5rem;
+        }
+
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: $white;
+          margin: 0 5px;
+        }
+      }
+    }
+
+    .btn__reuseable--weekly {
+      margin: 80px 0 0;
+      background-color: $white;
+      color: $white;
+      border: 1px solid $primary-color;
+      border-radius: 0;
+      padding: 15px 40px;
+      transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      font-size: 1.6rem;
+      
+      &::before {
+        background-color: $primary-color;
+        border-radius: 0;
+      }
+      &:hover {
+        color: $black;
+        border: 1px solid $primary-color;
+
+        &::before {
+          transform-origin: right center;
+          transform: scale(0, 1);
+        }
+      }
+    }
+  }
 }
 
+// Rotate icon menu list
 .btn--menu-list {
   display: inline-block;
   text-align: right;
@@ -361,10 +522,7 @@
   }
 }
 
-.pc-menu__text--gray {
-  color: $gray;
-}
-
+// Sticky nav
 .sticky {
   position: fixed;
   top: 0;

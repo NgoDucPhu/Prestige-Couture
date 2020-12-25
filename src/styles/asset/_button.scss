@@ -4,17 +4,19 @@
   outline: none;
   cursor: pointer;
   display: inline-block;
+  font-family: "Roboto", sans-serif;
+  color: $primary-color;
+  font-weight: 400;
 }
 
-.btn__slide {
+.btn__reuseable {
   position: relative;
   flex-basis: calc(50% - 10px);
-  padding: 14px 28px;
+  padding: 14px 20px;
   border: 1px solid $white;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 11px;
   text-align: center;
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   background-color: transparent;
   z-index: 1;

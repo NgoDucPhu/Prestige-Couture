@@ -34,7 +34,7 @@
 
           .pc-currency__list {
             opacity: 0;
-            transform: translateX(-100%);
+            transform: translateX(-200%);
             position: absolute;
             top: 120%;
             left: 0;
@@ -146,11 +146,11 @@
           padding: 0 50px;
 
           .slide__btn {
-            .btn__slide--1, .btn__slide--3, .btn__slide--4{
+            .btn__reuseable--slide-1, .btn__reuseable--slide-3, .btn__reuseable--slide-4{
               max-width: 150px;
             }
 
-            .btn__slide--2 {
+            .btn__reuseable--slide-2 {
               max-width: 240px;
             }
           }

@@ -37,12 +37,12 @@
         .slide__content {
 
           .slide__btn {
-            .btn__slide--1, .btn__slide--3, .btn__slide--4{
-              max-width: 150px;
+            .btn__reuseable--slide-1, .btn__reuseable--slide-3, .btn__reuseable--slide-4{
+              flex-basis: 150px;
             }
 
-            .btn__slide--2 {
-              max-width: 240px;
+            .btn__reuseable--slide-2 {
+              flex-basis: 240px;
             }
           }
         }
