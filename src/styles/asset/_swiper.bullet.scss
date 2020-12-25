@@ -1,0 +1,18 @@
+.swiper-pagination {
+    text-align: left;
+    padding: 0 24px ;
+  }
+
+  .swiper-pagination-bullet {
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+    background: transparent;
+    border: 6px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &-active {
+      background: $white;
+    }
+  }

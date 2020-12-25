@@ -46,7 +46,8 @@ $(".pc-menu__input").change(function () {
 });
 
 // Slider Swiper
-let swiper1 = new Swiper(".pc-slider > .swiper-container", {
+// <---- Slider Section ---->
+let sliderSectionSwiper = new Swiper(".pc-slider > .swiper-container", {
   slidesPerView: 1,
   speed: 1500,
   loop: true,
@@ -62,11 +63,21 @@ let swiper1 = new Swiper(".pc-slider > .swiper-container", {
   },
 });
 
+// <--- Collection Image Slider --- >
+let collectionImgSwiper = new Swiper(".pc-collection-image > .swiper-container", {
+  slidesPerView: 1,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
 
 // Change slidePerView when window resize
 $(document).ready(function () {
   if ($(window).width() < 900) {
-    let swiper2 = new Swiper(".pc-weekly .swiper-container", {
+    let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
       slidesPerView: 2,
       spaceBetween: 10,
       centeredSlides: false,
@@ -78,7 +89,7 @@ $(document).ready(function () {
   }
 
   else if ($(window).width() < 910) {
-    let swiper2 = new Swiper(".pc-weekly .swiper-container", {
+    let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
       slidesPerView: 3,
       spaceBetween: 10,
       centeredSlides: false,
@@ -89,7 +100,7 @@ $(document).ready(function () {
     });
   }
   else {
-    let swiper2 = new Swiper(".pc-weekly .swiper-container", {
+    let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
       slidesPerView: 4,
       spaceBetween: 10,
       centeredSlides: false,
@@ -101,7 +112,7 @@ $(document).ready(function () {
   }
   $(window).resize(function () {
     if ($(window).width() < 800) {
-      let swiper2 = new Swiper(".pc-weekly .swiper-container", {
+      let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
         slidesPerView: 2,
         spaceBetween: 10,
         centeredSlides: false,
@@ -113,7 +124,7 @@ $(document).ready(function () {
     }
 
     else if ($(window).width() < 910) {
-      let swiper2 = new Swiper(".pc-weekly .swiper-container", {
+      let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
         slidesPerView: 3,
         spaceBetween: 10,
         centeredSlides: false,
@@ -124,7 +135,7 @@ $(document).ready(function () {
       });
     }
     else {
-      let swiper2 = new Swiper(".pc-weekly .swiper-container", {
+      let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
         slidesPerView: 4,
         spaceBetween: 10,
         centeredSlides: false,

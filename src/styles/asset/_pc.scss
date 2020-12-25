@@ -160,5 +160,58 @@
         text-align: right;
       }
     }
+
+    .pc-collection-image {
+      display: flex;
+      flex-wrap: wrap;
+
+      .swiper-container {
+        display: none;
+      }
+    
+      .pc-collection__box {
+        flex-basis: calc(100% / 3);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        display: block;
+    
+        .pc-collection__img {
+          transition: all 4s ease-in-out;
+        }
+    
+        &:hover > .pc-collection__img {
+          transform: scale(1.3);
+    
+        }
+    
+        .pc-collection__content {
+          position: absolute;
+          bottom: 50px;
+          left: 50px;
+          right: 50px;
+          color: $white;
+    
+          .pc-collection__subtitle {
+            font-size: 1.5rem;
+            line-height: 25px;
+          }
+    
+          .pc-collection__title {
+            margin: 16px 0 30px;
+            font-size: 2.3rem;
+            line-height: 38px;
+            font-weight: 400;
+          }
+    
+          .btn__reuseable--collection {
+            padding: 15px 40px;
+            font-weight: 600;
+            letter-spacing: 2.6px;
+          }
+        }
+      }
+    
+    }
   }
 }

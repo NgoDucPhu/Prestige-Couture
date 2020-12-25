@@ -281,7 +281,7 @@
           }
 
           .btn__reuseable--slide-2 {
-            flex-basis: 100%;
+            flex-basis: 50%;
           }
 
           .btn__reuseable--slide-4 {
@@ -313,25 +313,6 @@
       background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-mobile---4_x800.jpg?v=1527725848");
       background-size: cover;
       background-position: center;
-    }
-
-    .swiper-pagination {
-      text-align: left;
-      padding: 0 2.5rem 2.5rem;
-    }
-
-    .swiper-pagination-bullet {
-      box-sizing: border-box;
-      width: 14px;
-      height: 14px;
-      background: transparent;
-      border: 6px solid #ffffff;
-      border-radius: 50%;
-      cursor: pointer;
-
-      &-active {
-        background: $white;
-      }
     }
   }
 
@@ -465,7 +446,7 @@
       padding: 15px 40px;
       transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
       font-size: 1.6rem;
-      
+
       &::before {
         background-color: $primary-color;
         border-radius: 0;
@@ -479,6 +460,61 @@
           transform: scale(0, 1);
         }
       }
+    }
+  }
+}
+
+.pc-collection-image {
+  & > .pc-collection__box {
+    display: none;
+  }
+  
+  .swiper-container {
+    display: block;
+
+    .pc-collection__box {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+  
+      .pc-collection__img {
+        transition: all 4s ease-in-out;
+      }
+  
+      &:hover > .pc-collection__img {
+        transform: scale(1.3);
+  
+      }
+  
+      .pc-collection__content {
+        position: absolute;
+        bottom: 80px;
+        left: 24px;
+        right: 24px;
+        color: $white;
+  
+        .pc-collection__subtitle {
+          font-size: 1.5rem;
+          line-height: 25px;
+        }
+  
+        .pc-collection__title {
+          margin: 16px 0 30px;
+          font-size: 2.3rem;
+          line-height: 38px;
+          font-weight: 400;
+        }
+  
+        .btn__reuseable--collection {
+          padding: 15px 40px;
+          font-weight: 600;
+          letter-spacing: 2.6px;
+        }
+      }
+    }
+    .swiper-pagination {
+      text-align: left;
+      padding: 20px 24px ;
     }
   }
 }
