@@ -30,7 +30,6 @@ $(window).scroll(function () {
   stickyNav();
 });
 
-
 // Show Currency List
 $(".pc-currency__btn").click(() => {
   $(".pc-currency__list").toggleClass("pc-currency__list--show");
@@ -49,18 +48,38 @@ $(".pc-menu__input").change(function () {
 // <---- Slider Section ---->
 let sliderSectionSwiper = new Swiper(".pc-slider > .swiper-container", {
   slidesPerView: 1,
-  speed: 1500,
+  speed: 1800,
   loop: true,
   spaceBetween: 50,
   centeredSlides: true,
   autoplay: {
-    delay: 2000,
+    delay: 1800,
     disableOnInteraction: false,
   },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+  on: {
+    slideChange: ()=> {
+      anime({
+        targets: '.swiper-container .slide__content',
+        delay: 500,
+        translateY: ['100%', '0%'],
+        opacity: ['0', '1'],
+        easing: 'easeInOutQuad',
+      });
+    },
+    transitionEnd: () => {
+      anime({
+        targets: '.swiper-container .slide__content',
+        delay: 1000,
+        translateY: ['0%', '100%'],
+        opacity: ['1', '0'],
+        easing: 'easeInOutQuad',
+      });
+    }
+  }
 });
 
 // <--- Collection Image Slider --- >
