@@ -213,5 +213,17 @@
       }
     
     }
+
+    .pc-news {
+      .pc-news__content {
+        .pc-news__group {
+          flex-basis: calc(33.33% - 32px);
+
+          &:last-child {
+            display: block;
+          }
+        }
+      }
+    }
   }
 }

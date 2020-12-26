@@ -47,6 +47,30 @@
   }
 }
 
+.btn__reuseable--black {
+  background-color: $white;
+  color: $white;
+  border: 1px solid $primary-color;
+  border-radius: 0;
+  padding: 15px 40px;
+  transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  font-size: 1.6rem;
+
+  &::before {
+    background-color: $primary-color;
+    border-radius: 0;
+  }
+  &:hover {
+    color: $black;
+    border: 1px solid $primary-color;
+
+    &::before {
+      transform-origin: right center;
+      transform: scale(0, 1);
+    }
+  }
+}
+
 // ------------ keyframes --------------
 @keyframes fadeIn {
   from {

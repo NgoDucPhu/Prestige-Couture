@@ -73,80 +73,29 @@ let collectionImgSwiper = new Swiper(".pc-collection-image > .swiper-container",
   },
 });
 
-
-// Change slidePerView when window resize
-$(document).ready(function () {
-  if ($(window).width() < 900) {
-    let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
-      slidesPerView: 2,
-      spaceBetween: 10,
-      centeredSlides: false,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  }
-
-  else if ($(window).width() < 910) {
-    let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
-      slidesPerView: 3,
-      spaceBetween: 10,
-      centeredSlides: false,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  }
-  else {
-    let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
-      slidesPerView: 4,
-      spaceBetween: 10,
-      centeredSlides: false,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  }
-  $(window).resize(function () {
-    if ($(window).width() < 800) {
-      let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        centeredSlides: false,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    }
-
-    else if ($(window).width() < 910) {
-      let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
-        slidesPerView: 3,
-        spaceBetween: 10,
-        centeredSlides: false,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    }
-    else {
-      let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
+// <--- Weekly Slider --->
+let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
         slidesPerView: 4,
         spaceBetween: 10,
         centeredSlides: false,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
-        },
+        }, 
+        breakpoints: {
+          480: {
+            slidesPerView: 1.5,
+          },
+          668: {
+            slidesPerView: 2.5,
+
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }
       });
-    }
-  })
-});
+
 
 
 
