@@ -61,7 +61,7 @@ let sliderSectionSwiper = new Swiper(".pc-slider > .swiper-container", {
     clickable: true,
   },
   on: {
-    slideChange: ()=> {
+    slideChange: () => {
       anime({
         targets: '.swiper-container .slide__content',
         delay: 500,
@@ -94,27 +94,23 @@ let collectionImgSwiper = new Swiper(".pc-collection-image > .swiper-container",
 
 // <--- Weekly Slider --->
 let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
-        slidesPerView: 4,
-        spaceBetween: 10,
-        centeredSlides: false,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }, 
-        breakpoints: {
-          480: {
-            slidesPerView: 1.5,
-          },
-          668: {
-            slidesPerView: 2.5,
+  slidesPerView: 4,
+  spaceBetween: 10,
+  centeredSlides: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    480: {
+      slidesPerView: 1.5,
+    },
+    668: {
+      slidesPerView: 2.5,
 
-          },
-          1024: {
-            slidesPerView: 4,
-          },
-        }
-      });
-
-
-
-
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  }
+});

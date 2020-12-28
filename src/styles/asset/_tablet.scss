@@ -5,14 +5,14 @@
 
       .pc-header__logo {
         .pc-logo__link {
-            font-size: 3rem;
+          font-size: 3rem;
         }
       }
 
       .pc-main__nav {
-          .pc-nav__menu {
-              width: 400px;
-          }
+        .pc-nav__menu {
+          width: 400px;
+        }
       }
 
       .pc-menu__icon {
@@ -20,24 +20,25 @@
         height: 25px;
 
         &--search {
-            margin-right: 2rem;
+          margin-right: 2rem;
         }
 
         &--times {
-            width: 20px;
-            height: 20px;
+          width: 20px;
+          height: 20px;
         }
       }
     }
-    
+
     .pc-slider {
       height: 37vw;
 
       .swiper-slide {
         .slide__content {
-
           .slide__btn {
-            .btn__reuseable--slide-1, .btn__reuseable--slide-3, .btn__reuseable--slide-4{
+            .btn__reuseable--slide-1,
+            .btn__reuseable--slide-3,
+            .btn__reuseable--slide-4 {
               flex-basis: 150px;
             }
 
@@ -48,74 +49,72 @@
         }
       }
       .slide-1 {
-        background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---6_1600x.jpg?v=1527703158');
-        background-size: cover;
-        background-position:  center;
-      }
-  
-      .slide-2 {
-        background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---8_1400x.jpg?v=1527703171');
-        background-size: cover;
-        background-position:  center;
-      }
-  
-      .slide-3 {
-        background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---11_1400x.jpg?v=1527703679');
-        background-size: cover;
-        background-position:  center;
-      }
-  
-      .slide-4 {
-        background-image: url('https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---4_1400x.jpg?v=1527703679');
+        background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---6_1600x.jpg?v=1527703158");
         background-size: cover;
         background-position: center;
       }
 
+      .slide-2 {
+        background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---8_1400x.jpg?v=1527703171");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .slide-3 {
+        background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---11_1400x.jpg?v=1527703679");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .slide-4 {
+        background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/Slide-desktop---4_1400x.jpg?v=1527703679");
+        background-size: cover;
+        background-position: center;
+      }
     }
 
     .pc-collection-image {
       display: flex;
       flex-wrap: wrap;
-      
+
       .swiper-container {
         display: none;
       }
-    
+
       .pc-collection__box {
         flex-basis: calc(100% / 2);
         position: relative;
         overflow: hidden;
         cursor: pointer;
         display: block;
-    
+
         .pc-collection__img {
           transition: all 4s ease-in-out;
         }
-    
+
         &:hover > .pc-collection__img {
           transform: scale(1.3);
-    
         }
-    
+
         .pc-collection__content {
           position: absolute;
           bottom: 50px;
           left: 50px;
           right: 50px;
           color: $white;
-    
+
           .pc-collection__subtitle {
             font-size: 1.5rem;
             line-height: 25px;
           }
-    
+
           .pc-collection__title {
             margin: 16px 0 30px;
             font-size: 2.3rem;
             line-height: 38px;
             font-weight: 400;
           }
-    
+
           .btn__reuseable--collection {
             padding: 15px 40px;
             font-weight: 600;
@@ -123,9 +122,8 @@
           }
         }
       }
-    
     }
-    
+
     .pc-news {
       .pc-news__content {
         padding: 0 75px;
@@ -143,6 +141,11 @@
         margin: 50px 0 0;
       }
     }
-    
+
+    .pc-image {
+      .pc-image__content {
+        width: 250px;
+      }
+    }
   }
 }
