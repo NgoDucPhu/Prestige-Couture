@@ -1,7 +1,11 @@
 import "../styles/app.scss";
+import sliderSectionSwiper from './components/slider/sliderSection';
+import weeklySliderSwiper from  './components/slider/weeklySlider';
+import newCollectionSliderSwiper from './components/slider/newCollection';
+import imgCollectionSwiper from "./components/slider/imgCollection";
 
 // Rotate Icon Menu List
-document.querySelectorAll(".pc-menu__item").forEach((ele) => {
+$(".pc-menu__item").each((idx, ele) => {
   $(ele).click(function () {
     $(this)
       .children(".btn--menu-list")
@@ -46,71 +50,32 @@ $(".pc-menu__input").change(function () {
 
 // Slider Swiper
 // <---- Slider Section ---->
-let sliderSectionSwiper = new Swiper(".pc-slider > .swiper-container", {
-  slidesPerView: 1,
-  speed: 1800,
-  loop: true,
-  spaceBetween: 50,
-  centeredSlides: true,
-  autoplay: {
-    delay: 1800,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  on: {
-    slideChange: () => {
-      anime({
-        targets: '.swiper-container .slide__content',
-        delay: 500,
-        translateY: ['100%', '0%'],
-        opacity: ['0', '1'],
-        easing: 'easeInOutQuad',
-      });
-    },
-    transitionEnd: () => {
-      anime({
-        targets: '.swiper-container .slide__content',
-        delay: 1000,
-        translateY: ['0%', '100%'],
-        opacity: ['1', '0'],
-        easing: 'easeInOutQuad',
-      });
-    }
-  }
-});
+let sliderSection = sliderSectionSwiper;
+
+// <--- Weekly Slider ---> 
+let weeklySlider = weeklySliderSwiper;
 
 // <--- Collection Image Slider --- >
-let collectionImgSwiper = new Swiper(".pc-collection-image > .swiper-container", {
-  slidesPerView: 1,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+let imgCollection = imgCollectionSwiper;
 
-// <--- Weekly Slider --->
-let weeklySliderSwiper = new Swiper(".pc-weekly .swiper-container", {
-  slidesPerView: 4,
-  spaceBetween: 10,
-  centeredSlides: false,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    480: {
-      slidesPerView: 1.5,
-    },
-    668: {
-      slidesPerView: 2.5,
+// <--- New Collection Slider --->
+let newCollectionSlider = newCollectionSliderSwiper;
 
-    },
-    1024: {
-      slidesPerView: 4,
-    },
-  }
-});
+// Show image box when circle clicked
+$('.circle').each((idx, item) => {
+  $(item).click(function (){
+    if(!$(this).hasClass('active')){
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+      let imgNewBoxArr =  $(this).closest('.shop-box-left').next().children('.shop-box-right__img')
+      if(idx == 0) {
+        $(imgNewBoxArr[0]).addClass('hide');
+        $(imgNewBoxArr[1]).removeClass('hide');
+      }
+      else if (idx == 1) {
+        $(imgNewBoxArr[0]).removeClass('hide');
+        $(imgNewBoxArr[1]).addClass('hide');
+      }
+    } 
+  })
+})
