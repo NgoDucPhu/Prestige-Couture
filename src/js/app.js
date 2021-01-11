@@ -1,6 +1,6 @@
 import "../styles/app.scss";
 import sliderSectionSwiper from './components/slider/sliderSection';
-import weeklySliderSwiper from  './components/slider/weeklySlider';
+import weeklySliderSwiper from './components/slider/weeklySlider';
 import newCollectionSliderSwiper from './components/slider/newCollection';
 import imgCollectionSwiper from "./components/slider/imgCollection";
 
@@ -17,22 +17,25 @@ $(".pc-menu__item").each((idx, ele) => {
 });
 
 // Sticky Nav
-let stickyNavTop = $('.pc-header').offset().top;
-let stickyNav = function () {
-  let scrollTop = $(window).scrollTop(); // our current vertical position from the top
-  // if we've scrolled more than the navigation, change its position to fixed to stick to top,
-  // otherwise change it back to relative
-  if (scrollTop > stickyNavTop) {
-    $('.pc-header').addClass('sticky');
-  } else {
-    $('.pc-header').removeClass('sticky');
-  }
-};
-stickyNav();
-// and run it again every time you scroll
-$(window).scroll(function () {
+function stickyHeader() {
+  let stickyNavTop = $('.pc-header').offset().top;
+  let stickyNav = function () {
+    let scrollTop = $(window).scrollTop(); // our current vertical position from the top
+    // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+    // otherwise change it back to relative
+    if (scrollTop > stickyNavTop) {
+      $('.pc-header').addClass('sticky');
+    } else {
+      $('.pc-header').removeClass('sticky');
+    }
+  };
   stickyNav();
-});
+  // and run it again every time you scroll
+  $(window).scroll(function () {
+    stickyNav();
+  });
+}
+stickyHeader();
 
 // Show Currency List
 $(".pc-currency__btn").click(() => {
@@ -63,12 +66,12 @@ let newCollectionSlider = newCollectionSliderSwiper;
 
 // Show image box when circle clicked
 $('.circle').each((idx, item) => {
-  $(item).click(function (){
-    if(!$(this).hasClass('active')){
+  $(item).click(function () {
+    if (!$(this).hasClass('active')) {
       $(this).addClass('active');
       $(this).siblings().removeClass('active');
-      let imgNewBoxArr =  $(this).closest('.shop-box-left').next().children('.shop-box-right__img')
-      if(idx == 0) {
+      let imgNewBoxArr = $(this).closest('.shop-box-left').next().children('.shop-box-right__img')
+      if (idx == 0) {
         $(imgNewBoxArr[0]).addClass('hide');
         $(imgNewBoxArr[1]).removeClass('hide');
       }
@@ -76,6 +79,6 @@ $('.circle').each((idx, item) => {
         $(imgNewBoxArr[0]).removeClass('hide');
         $(imgNewBoxArr[1]).addClass('hide');
       }
-    } 
+    }
   })
 })

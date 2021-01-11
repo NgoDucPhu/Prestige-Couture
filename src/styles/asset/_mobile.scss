@@ -94,6 +94,7 @@
           }
 
           .pc-menu__sublist {
+            transform: scale(0);
             display: none;
             // visibility: hidden;
             background: $white;
@@ -136,6 +137,7 @@
           }
 
           .pc-menu__sublist--show {
+            // transform: scale(1);
             display: block;
           }
         }
@@ -390,8 +392,8 @@
           position: relative;
 
           .slide__img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            height: 100%;
             transition: opacity 0.3s ease-in-out;
 
             &:nth-child(2) {
@@ -543,15 +545,17 @@
       }
 
       .shop-inner-box {
-        height: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
       }
 
       .shop-box-left {
         max-width: 550px;
-        max-height: 550px;
+        height: 100%;
         position: relative;
+
         .circle-1 {
           top: 330px;
           left: 100px;
@@ -627,18 +631,11 @@
     }
 
     .shop-box-right__text .shop-box-right__title {
-      font-size: 1.4rem;
-      line-height: 1.5;
-      width: 90%;
-      color: $primary-color;
-
-      margin-bottom: 15px;
+      padding: 20px 0 0;
     }
 
     .shop-box-right__price {
-      font-size: 1.6rem;
-      letter-spacing: 1.2;
-      color: $gray;
+      padding-bottom: 20px;
     }
   }
 
@@ -710,10 +707,10 @@
   }
 
   .pc-auguste {
-    text-align: center;
-
+    padding : 0 0 80px 0;
     .pc-auguste__content {
-      padding: 50px 24px 70px;
+      padding: 50px 24px;
+      text-align: center;
 
       .pc-auguste__title {
         font-size: 1.5rem;
@@ -736,62 +733,105 @@
 
     .pc-auguste__video {
       width: 100%;
-      height: calc(100vh - 124px);
-    }
-  }
-
-  .pc-product {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 80px 0;
-
-    .product__left-box {
-      margin-right: 40px;
-      max-width: 550px;
-      max-height: 550px;
-      .product__img {
-        max-width: 100%;
+      height: 400px;
+      background: $black;
+      .auguste__video {
+        width: 100%;
         height: 100%;
-
-        &:nth-child(2) {
-          display: none;
-        }
-      }
-    }
-
-    .product__right-box {
-      margin-left: 40px;
-
-      .product__select-clothes {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        
-        label {
-          width: 35px;
-          height: 35px;
-          cursor: pointer;
-        }
-
-        input {
-          display: none;
-        }
-
-        .product__clothes-navy {
-          label {
-            background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/navy-blue_64x64.png?v=1554452202");
-          }
-        }
-
-        .product__clothes-emerald {
-          label {
-            background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/emerald_64x64.png?v=1554452202");
-          }
-        }
       }
     }
   }
+
+  // .pc-product {
+  //   max-width: 900px;
+  //   display: flex;
+  //   justify-content: center;
+  //   // flex-direction: column;
+  //   align-items: center;
+  //   padding: 80px 0;
+  //   margin: 0 auto;
+
+  //   .product__left-box {
+  //     margin-right: 40px;
+  //     flex: 1;
+  //     .product__img {
+  //       max-width: 100%;
+  //       height: 100%;
+
+  //       &:nth-child(2) {
+  //         display: none;
+  //       }
+  //     }
+  //   }
+
+  //   .product__right-box {
+  //     margin-left: 40px;
+  //     flex: 1;
+  //     height: 100%;
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: space-between;
+
+  //     .product__title {
+  //       margin: 20px 0;
+  //       font-size: 2.4rem;
+  //     }
+
+  //     .product__price {
+  //       margin: 0 0 30px 0;
+  //       font-size: 2.4rem;
+  //       color: $gray;
+  //     }
+
+  //     .product__select-clothes {
+  //       display: flex;
+  //       justify-content: flex-start;
+  //       align-items: center;
+  //       margin: 10px 0 20px;
+
+  //       label {
+  //         width: 35px;
+  //         height: 35px;
+  //         cursor: pointer;
+  //       }
+
+  //       input {
+  //         display: none;
+  //       }
+
+  //       .product__clothes-navy {
+  //         margin: 0 15px 0 0;
+  //         padding: 2px;
+  //         border: 1px solid black;
+  //         label {
+  //           background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/navy-blue_64x64.png?v=1554452202");
+  //           background-size: cover;
+  //           background-position: center ;
+  //         }
+  //       }
+
+  //       .product__clothes-emerald {
+  //         label {
+  //           background-image: url("https://cdn.shopify.com/s/files/1/0011/9242/7564/files/emerald_64x64.png?v=1554452202");
+  //           background-size: cover;
+
+            
+  //         }
+  //       }
+  //     }
+
+  //     .product__text {
+  //       display: flex;
+  //       justify-content: space-between;
+  //       align-items: center;
+
+  //       span:last-child {
+  //         text-decoration: underline;
+  //         color: $gray;
+  //       }
+  //     }
+  //   }
+  // }
 
   .pc-image {
     width: 100%;
@@ -821,6 +861,7 @@
       }
     }
   }
+
 }
 
 // Rotate icon menu list
